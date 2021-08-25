@@ -1,0 +1,52 @@
+table, th, tr, td{
+	border: 1px solid black;
+    text-align: center;
+	border-collapse: collapse;
+}
+
+table {
+	margin: 10px auto;
+}
+
+.invisible{
+	border-width: 0;
+	text-align: left;
+}
+
+th, td {
+	padding: 1px 0.5em;
+}
+
+form, h1{
+	text-align: center;
+}
+
+.white {
+	background-color: white;
+}
+
+.lightGray {
+	background-color: whitesmoke;
+}
+
+input:required:invalid {
+	border: 3px solid purple;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"]:valid {
+	border: 3px solid green;
+}
+
+input:invalid {
+	border: 3px solid red;
+}
+
+p.error {
+	margin: 0.15em 0 0.5em;
+	padding: 0;
+	text-decoration: underline;
+	text-decoration-color: red;
+}
