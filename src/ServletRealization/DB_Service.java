@@ -288,10 +288,10 @@ public class DB_Service {
             if (rs.next()) {
                 return rs.getString("department");
             }
-            throw new IllegalArgumentException("Wrong id: " + id);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        throw new IllegalArgumentException("Wrong id: " + id);
     }
 
     public String getDepartmentName(int id) throws SQLException {

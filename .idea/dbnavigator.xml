@@ -24,14 +24,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="5694ad44-d78e-4c2a-8c6a-502dff5d3a96">
-        <schema name="information_schema" object-types="table, view" />
-        <schema name="mysql" object-types="table, view" />
-        <schema name="sys" object-types="table, view" />
-        <schema name="test_task" object-types="table, view" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="5694ad44-d78e-4c2a-8c6a-502dff5d3a96">
