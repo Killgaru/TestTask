@@ -12,8 +12,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.Enumeration;
 import java.util.LinkedList;
 
 @WebServlet(name = "sTable", urlPatterns = "/table")

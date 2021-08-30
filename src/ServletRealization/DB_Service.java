@@ -188,9 +188,6 @@ public class DB_Service {
         PreparedStatement ps = connection.prepareStatement(sql);
         int i = 1;
         for (FieldsConstructor fc : columns) {
-//            if (fc.isDISABLED() || !fc.isChanged()) {
-//                continue;
-//            }
             if (fc.isVARCHAR()) {
                 ps.setString(i, (String) fc.getValue());
             } else if (fc.isINTEGER()) {
@@ -210,19 +207,10 @@ public class DB_Service {
         StringBuilder sql = new StringBuilder(),
                 sqlColumns = new StringBuilder("("),
                 sqlValues = new StringBuilder(" VALUES (");
-//        boolean noValues = true;
-        for (int i = 0; i < columns.length; i++) {
-//            if (columns[i].isDISABLED() || !columns[i].isChanged()) {
-//                continue;
-//            }
-//            noValues = false;
-            sqlColumns.append(columns[i].getCOLUMN()).append(", ");
+        for (FieldsConstructor column : columns) {
+            sqlColumns.append(column.getCOLUMN()).append(", ");
             sqlValues.append("?, ");
         }
-//        if (noValues) {
-//            System.out.println("No values for adding.");
-//            return;
-//        }
         sqlColumns.deleteCharAt(sqlColumns.lastIndexOf(",", sqlColumns.length() - 2));
         sqlValues.deleteCharAt(sqlValues.lastIndexOf(",", sqlValues.length() - 2));
         sqlColumns.append(")");
@@ -248,16 +236,8 @@ public class DB_Service {
                 oldDepartmentName = getWorkerDepartment(id);
                 newDepartmentName = (String) fs.getValue();
             }
-//            if (fs.isDISABLED() || !fs.isChanged()) {
-//                continue;
-//            }
-//            noValues = false;
             sql.append(fs.getCOLUMN()).append(" = ?, ");
         }
-//        if (noValues) {
-//            System.out.println("No values for changing.");
-//            return;
-//        }
         sql.deleteCharAt(sql.lastIndexOf(",", sql.length() - 2));
         sql.append("WHERE id = ").append(id);
         try {

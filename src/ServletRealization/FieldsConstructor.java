@@ -12,7 +12,6 @@ public class FieldsConstructor<T> {
     private final boolean NULLABLE;
     private final boolean DISABLED;
     private T value;
-    private T validValue;
     private String invalidValue;
     private String invalidMessage;
     private boolean changed;

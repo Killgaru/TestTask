@@ -15,7 +15,6 @@ import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
-import java.util.Enumeration;
 import java.util.LinkedList;
 import java.util.Map;
 
@@ -149,13 +148,6 @@ public class Fields extends HttpServlet {
                     valid = false;
                 }
             }
-/*            if (fc.isINTEGER()) {
-                fc.setValue(Integer.parseInt(req.getParameter(fc.getCOLUMN())));
-            } else if (fc.isVARCHAR()) {
-                fc.setValue(req.getParameter(fc.getCOLUMN()));
-            } else if (fc.isDATE()) {
-                fc.setValue(Date.valueOf(req.getParameter(fc.getCOLUMN())));
-            }*/
         }
         return valid;
     }
